@@ -19,7 +19,7 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Kode Pelanggan</th>
+                        <th>Kd Pelanggan</th>
                         <th>Nama Pelanggan</th>
                         <th>Alamat Pelanggan</th>
                         <th>Kota Pelanggan</th>
@@ -32,7 +32,7 @@
                     <?php foreach ($dtpelanggan as $value) : ?>
                         <tr>
                             <td><?= $i++; ?></td>
-                            <td><?= $value->kode_pelanggan; ?></td>
+                            <td><?= $value->kd_pelanggan; ?></td>
                             <td><?= $value->nama_pelanggan; ?></td>
                             <td><?= $value->alamat_pelanggan; ?></td>
                             <td><?= $value->kota_pelanggan; ?></td>
