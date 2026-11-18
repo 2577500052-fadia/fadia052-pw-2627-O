@@ -9,41 +9,59 @@
 <body>
 
 <div class="content-wrapper">
-    <div class="card">
-        <div class="card-header">
-            <h2 class="card-title">Data Pelanggan</h2>
-        </div>
 
-        <div class="card-body">
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Kd Pelanggan</th>
-                        <th>Nama Pelanggan</th>
-                        <th>Alamat Pelanggan</th>
-                        <th>Kota Pelanggan</th>
-                        <th>Telp. Plg</th>
-                        <th>Email Plg</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php $i = 1; ?>
-                    <?php foreach ($dtpelanggan as $value) : ?>
-                        <tr>
-                            <td><?= $i++; ?></td>
-                            <td><?= $value->kd_pelanggan; ?></td>
-                            <td><?= $value->nama_pelanggan; ?></td>
-                            <td><?= $value->alamat_pelanggan; ?></td>
-                            <td><?= $value->kota_pelanggan; ?></td>
-                            <td><?= $value->telp_pelanggan; ?></td>
-                            <td><?= $value->email_pelanggan; ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+    <!-- Content Header -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <h1>Data Pelanggan</h1>
         </div>
-    </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content">
+        <div class="container-fluid">
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Data Pelanggan</h3>
+                </div>
+
+                <div class="card-body">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Kd Pelanggan</th>
+                                <th>Nama Pelanggan</th>
+                                <th>Alamat Pelanggan</th>
+                                <th>Kota Plg</th>
+                                <th>Telp. Plg</th>
+                                <th>Email Plg</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <?php $no = 1; ?>
+                            <?php foreach ($dtpelanggan as $p) { ?>
+                                <tr>
+                                    <td><?php echo $no++; ?></td>
+                                    <td><?php echo $p->kd_pelanggan; ?></td>
+                                    <td><?php echo $p->nama_pelanggan; ?></td>
+                                    <td><?php echo $p->alamat_pelanggan; ?></td>
+                                    <td><?php echo $p->kota_pelanggan; ?></td>
+                                    <td><?php echo $p->telp_pelanggan; ?></td>
+                                    <td><?php echo $p->email; ?></td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
 </div>
 
 </body>
