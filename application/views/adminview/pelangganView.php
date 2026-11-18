@@ -10,42 +10,37 @@
 
 <div class="content-wrapper">
     <div class="card">
-
         <div class="card-header">
             <h2 class="card-title">Data Pelanggan</h2>
         </div>
-        <!-- /.card-header -->
 
         <div class="card-body">
-            <table id="example1" class="table table-bordered table-striped">
+            <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th width="5%">No</th> <th width="7%">Kode Pelanggan</th> <th width="15%">Nama Pelanggan</th>
-                        <th width="15%">Alamat</th> <th width="13%">Kota Pelanggan</th> <th width="13%">Telp.</th>
-                        <th>Email</th>
+                        <th>No</th>
+                        <th>Kode Pelanggan</th>
+                        <th>Nama Pelanggan</th>
+                        <th>Alamat Pelanggan</th>
+                        <th>Kota Pelanggan</th>
+                        <th>Telp. Plg</th>
+                        <th>Email Plg</th>
                     </tr>
                 </thead>
-                
                 <tbody>
-    <?php
-    $i = 1;
-    foreach ($dtpelanggan as $value) {
-    ?>
-        <tr>
-            <td><?php echo $i; ?></td>
-            <td><?php echo $value->kode_pelanggan; ?></td>
-            <td><?php echo $value->nama_pelanggan; ?></td>
-            <td><?php echo $value->alamat_pelanggan; ?></td>
-            <td><?php echo $value->kota_pelanggan; ?></td>
-            <td><?php echo $value->telp_pelanggan; ?></td>
-            <td><?php echo $value->email_pelanggan; ?></td>
-        </tr>
-    <?php
-        $i++;
-    }
-    ?>
-</tbody>
-
+                    <?php $i = 1; ?>
+                    <?php foreach ($dtpelanggan as $value) : ?>
+                        <tr>
+                            <td><?= $i++; ?></td>
+                            <td><?= $value->kode_pelanggan; ?></td>
+                            <td><?= $value->nama_pelanggan; ?></td>
+                            <td><?= $value->alamat_pelanggan; ?></td>
+                            <td><?= $value->kota_pelanggan; ?></td>
+                            <td><?= $value->telp_pelanggan; ?></td>
+                            <td><?= $value->email_pelanggan; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
             </table>
         </div>
     </div>
