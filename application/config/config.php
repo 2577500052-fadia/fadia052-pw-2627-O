@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/shopping52/shopping52';
+$config['base_url'] = 'http://localhost/fadia052-pw-2627-O';
 
 /*
 |--------------------------------------------------------------------------
